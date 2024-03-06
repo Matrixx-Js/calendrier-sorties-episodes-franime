@@ -10,6 +10,10 @@ Ce projet est une application web qui affiche le calendrier des sorties d'épiso
 - Basculer entre un mode sombre et un mode clair.
 - Accès direct aux pages des anime pour plus de détails.
 
+![image](https://github.com/Matrixx-Js/calendrier-sorties-episodes-franime/assets/62359510/6da9fb3f-1f82-4f6d-8222-a783f0594782)
+![image](https://github.com/Matrixx-Js/calendrier-sorties-episodes-franime/assets/62359510/1bc00f16-e9e9-481e-892a-892245a830e3)
+
+
 ## Technologies Utilisées
 
 - HTML
