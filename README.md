@@ -27,7 +27,7 @@ Ce projet est une application web qui affiche le calendrier des sorties d'épiso
 ## Comment Utiliser
 
 - Cliquez sur les boutons correspondant aux jours de la semaine pour afficher les sorties d'épisodes de chaque jour.
-- Utilisez le bouton "Toggle Fond" pour changer entre le mode sombre et le mode clair.
+- Utilisez le bouton "Contraste" pour changer entre le mode sombre et le mode clair.
 
 ## Hébergement
 
