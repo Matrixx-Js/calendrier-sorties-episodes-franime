@@ -31,7 +31,7 @@ Ce projet est une application web qui affiche le calendrier des sorties d'épiso
 
 ## Hébergement
 
-Ce projet est hébergé sur GitHub Pages et est accessible à l'adresse suivante : [Calendrier des Sorties d'Épisodes - Franime](https://matrixx-js.github.io/calendrier-sorties-episodes-franime/index.html).
+Ce projet est hébergé sur GitHub Pages et est accessible à l'adresse suivante : https://matrixx-js.github.io/calendrier-sorties-episodes-franime/index.html .
 
 ## Auteur
 
