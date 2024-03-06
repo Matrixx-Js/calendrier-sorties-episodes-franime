@@ -16,7 +16,7 @@
     <meta name="twitter:description" content="Consultez le calendrier des sorties d'épisodes d'anime sur Franime.">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://matrixx-js.github.io/calendrier-sorties-episodes-franime/Accueil.png">
-
+    <meta name="theme-color" content="#911313">
 </head>
 <body class="bg-gray-100">
     <div class="container mx-auto px-4 py-8">
@@ -91,7 +91,7 @@
                         <img src="${anime.affiche}" alt="${anime.title_anime}" class="mx-auto w-36 mb-4">
                         <h2 class="text-xl w-72 font-bold truncate">${anime.title_anime}</h2>
                         <p class="text-gray-600">Prochain épisode le ${day} à ${anime.heures}h${anime.minutes}</p>
-                        <a href="${anime.url_access_anime_page}" class="text-blue-500 hover:underline block mt-2">Accéder à la page de l'anime</a>
+                        <a target="_blank" href="${anime.url_access_anime_page}" class="text-blue-500 hover:underline block mt-2">Accéder à la page de l'anime</a>
                     `;
                     tabContent.appendChild(animeElement);
                 });
