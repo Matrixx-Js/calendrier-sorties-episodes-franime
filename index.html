@@ -17,6 +17,13 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://matrixx-js.github.io/calendrier-sorties-episodes-franime/Accueil.png">
     <meta name="theme-color" content="#911313">
+    
+    <style>
+        .day-selected {
+            background-color: #4F46E5;
+            color: white;
+        }
+    </style>
 </head>
 <body class="bg-gray-100">
     <div class="container mx-auto px-4 py-8">
@@ -25,25 +32,25 @@
             <!-- Onglets pour chaque jour de la semaine -->
             <ul class="w-full flex flex-row flex-wrap gap-2">
                 <li class="">
-                    <button onclick="toggleDay('lundi')" class="px-4 py-2 bg-blue-500 text-white rounded-lg focus:outline-none">Lundi</button>
+                    <button onclick="toggleDay('lundi')" id="btn-lundi" class="px-4 py-2 bg-blue-500 text-white rounded-lg focus:outline-none">Lundi</button>
                 </li>
                 <li class="">
-                    <button onclick="toggleDay('mardi')" class="px-4 py-2 bg-blue-500 text-white rounded-lg focus:outline-none">Mardi</button>
+                    <button onclick="toggleDay('mardi')" id="btn-mardi" class="px-4 py-2 bg-blue-500 text-white rounded-lg focus:outline-none">Mardi</button>
                 </li>
                 <li class="">
-                    <button onclick="toggleDay('mercredi')" class="px-4 py-2 bg-blue-500 text-white rounded-lg focus:outline-none">Mercredi</button>
+                    <button onclick="toggleDay('mercredi')" id="btn-mercredi" class="px-4 py-2 bg-blue-500 text-white rounded-lg focus:outline-none">Mercredi</button>
                 </li>
                 <li class="">
-                    <button onclick="toggleDay('jeudi')" class="px-4 py-2 bg-blue-500 text-white rounded-lg focus:outline-none">Jeudi</button>
+                    <button onclick="toggleDay('jeudi')" id="btn-jeudi" class="px-4 py-2 bg-blue-500 text-white rounded-lg focus:outline-none">Jeudi</button>
                 </li>
                 <li class="">
-                    <button onclick="toggleDay('vendredi')" class="px-4 py-2 bg-blue-500 text-white rounded-lg focus:outline-none">Vendredi</button>
+                    <button onclick="toggleDay('vendredi')" id="btn-vendredi" class="px-4 py-2 bg-blue-500 text-white rounded-lg focus:outline-none">Vendredi</button>
                 </li>
                 <li class="">
-                    <button onclick="toggleDay('samedi')" class="px-4 py-2 bg-blue-500 text-white rounded-lg focus:outline-none">Samedi</button>
+                    <button onclick="toggleDay('samedi')" id="btn-samedi" class="px-4 py-2 bg-blue-500 text-white rounded-lg focus:outline-none">Samedi</button>
                 </li>
                 <li>
-                    <button onclick="toggleDay('dimanche')" class="px-4 py-2 bg-blue-500 text-white rounded-lg focus:outline-none">Dimanche</button>
+                    <button onclick="toggleDay('dimanche')" id="btn-dimanche" class="px-4 py-2 bg-blue-500 text-white rounded-lg focus:outline-none">Dimanche</button>
                 </li>
             </ul>
             <!-- Conteneur pour afficher les animes de chaque jour -->
@@ -111,11 +118,22 @@
 
         // Fonction pour basculer entre les onglets des jours de la semaine
         function toggleDay(day) {
+            // Réinitialiser la classe des boutons
+            const days = ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi', 'dimanche'];
+            days.forEach(d => {
+                const btn = document.getElementById(`btn-${d}`);
+                btn.classList.remove('day-selected');
+            });
+
+            // Appliquer la classe au jour sélectionné
+            const selectedBtn = document.getElementById(`btn-${day}`);
+            selectedBtn.classList.add('day-selected');
+
             renderAnimeForDay(day.toLowerCase());
         }
 
         // Afficher les animes pour le jour actuel (lundi par défaut)
-        renderAnimeForDay('lundi');
+        toggleDay('lundi');
     
         let isBackgroundBlack = false;
 
